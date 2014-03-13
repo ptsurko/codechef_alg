@@ -9,7 +9,6 @@ import java.io.PrintWriter;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		// TODO Auto-generated method stub
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		PrintWriter out = new PrintWriter(new BufferedOutputStream(System.out));
 		
@@ -33,10 +32,6 @@ public class Main {
 	
 	public static int[] getFilledChambers(long particleCount, int chamberSize, int chamberCount) {
 		int[] chambers = new int[chamberCount];
-		
-//		while(particleCount >= Math.pow(chamberSize + 1, chamberCount) - 1 && chamberSize != 0 && chamberCount != 0) {
-//			particleCount -= (Math.pow(chamberSize + 1, chamberCount) - 1);
-//		}
 		
 		int chamberIndex = 0;
 		while(chamberIndex < chamberCount) {
