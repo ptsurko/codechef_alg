@@ -25,6 +25,8 @@ public class SumTest {
 		
 		Assert.assertEquals(Main.FindPairCount(new int[] {2, 2}), 0);
 		
+		Assert.assertEquals(Main.FindPairCount(new int[] {2, 2, 3, 2}), 3);
+		
 		Assert.assertEquals(Main.FindPairCount(new int[] {2, 2, 2, 2, 2}), 0);
 		
 		Assert.assertEquals(Main.FindPairCount(new int[] {2, 2, 1, 2, 1}), 0);

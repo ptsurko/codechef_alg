@@ -26,13 +26,13 @@ public class Main {
 		out.close();
 	}
 	
-	public static int FindPairCount(int[] numbers) {
-		int result = 0;
+	public static long FindPairCount(int[] numbers) {
+		long result = 0;
 		int nonOneLength = 0, twoCount = 0;
 		for(int i = 0; i < numbers.length; i++) {
-			if (numbers[i] != 1 && numbers[i] != 0) {
+			if (numbers[i] > 1) {
 				if (numbers[i] == 2) {
-					result += nonOneLength - twoCount;
+					result += (nonOneLength - twoCount);
 					
 					twoCount++;
 				} else {
