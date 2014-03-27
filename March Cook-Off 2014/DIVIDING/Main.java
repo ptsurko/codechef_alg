@@ -5,20 +5,17 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Main {
-
+	//Solution: http://www.9math.com/book/sum-first-n-natural-numbers
 	public static void main(String[] args) throws Exception, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		int memberCount = Integer.parseInt(br.readLine());
+		long memberCount = Integer.parseInt(br.readLine());
 		String[] stamps = br.readLine().split(" ");
 		long stampCount = 0;
-		long stampCountRequired = 0;
 		for(int i = 0; i < memberCount; i++) {
 			stampCount += Integer.parseInt(stamps[i]);
-			
-			stampCountRequired += (i + 1);
 		}
 		
-		System.out.println(stampCount == stampCountRequired ? "YES" : "NO");
+		System.out.println(stampCount == (memberCount * (memberCount + 1) / 2) ? "YES" : "NO");
 	}
 
 }
